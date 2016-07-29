@@ -4,11 +4,13 @@ public class MergeSort
 {
 	public static void main (String[] args)
 	{
+		String initArray = "intNotSorted";//file name to write the initial unsorted numbers to
 		String str = "integers2"; //file name to write the output to
 		int arrayA[] = new int [1000000]; //integer array with x elements
 		populateArray(arrayA); //call function to populate the array
 		
 		System.out.println("Before sorting: ");
+		sendToFile(initArray, arrayA);
 		//printArray(arrayA);
 		
 		arrayA = mergeSort(arrayA); 
